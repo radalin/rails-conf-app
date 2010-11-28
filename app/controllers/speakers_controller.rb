@@ -1,4 +1,4 @@
-class SpeakersController < ApplicationController
+class SpeakersController < AdminController
   # GET /speakers
   # GET /speakers.xml
   def index

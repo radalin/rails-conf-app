@@ -1,4 +1,4 @@
-class ConferencesController < ApplicationController
+class ConferencesController < AdminController
   # GET /conferences
   # GET /conferences.xml
   def index

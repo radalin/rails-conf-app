@@ -1,6 +1,11 @@
 RailsConf::Application.routes.draw do
   get "index/index"
 
+  get "signup", { :controller => "signup", :action => "index"}
+  get "signup/index"
+  get "signup/approved"
+  get "signup/save"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,6 +57,7 @@ RailsConf::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  root :to => "index#index"
 
   # See how all your routes lay out with "rake routes"
 

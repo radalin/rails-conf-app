@@ -1,4 +1,4 @@
-class AttendeesController < ApplicationController
+class AttendeesController < AdminController
   # GET /attendees
   # GET /attendees.xml
   def index
