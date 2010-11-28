@@ -14,7 +14,7 @@ RailsConf::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :speakers, :conferences, :sessions
+  resources :speakers, :conferences, :sessions, :attendees
 
   # Sample resource route with options:
   #   resources :products do

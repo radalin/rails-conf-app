@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :speaker %><br />
-    <%= f.text_field :speaker %>
+    <%= f.collection_select(:speaker_id, Speaker.find(:all), :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :conference %><br />
-    <%= f.text_field :conference %>
+    <%= f.collection_select(:conference_id, Conference.upcoming, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
+    <%= f.date_select :start_date %><%= f.time_select :start_date %>
   </div>
   <div class="actions">
     <%= f.submit %>
