@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  start_date: 2010-11-24
+  speaker: 
+  conference: 
+
+two:
+  name: MyString
+  start_date: 2010-11-24
+  speaker: 
+  conference: 

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @session.name %>
+</p>
+
+<p>
+  <b>Speaker:</b>
+  <%= @session.speaker %>
+</p>
+
+<p>
+  <b>Conference:</b>
+  <%= @session.conference %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @session.start_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

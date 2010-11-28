@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  scheduled_to: 2010-11-24
+  duration: 1
+
+two:
+  name: MyString
+  scheduled_to: 2010-11-24
+  duration: 1
