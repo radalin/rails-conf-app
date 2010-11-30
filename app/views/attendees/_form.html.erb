@@ -21,6 +21,17 @@
   </div>
   <div class="field">
     <%= f.label :conferences %><br />
+    <%
+    checked = ""
+    Conference.all.each do |c|
+        checked = ""
+        @attendee.conferences.each do |el|
+            if el.id == c.id
+                checked = "checked"
+            end
+        end %>
+        <input name="conferences[]" type="checkbox" value="<%=c.id%>" <%= checked %> /><%= c.name %><br />
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>

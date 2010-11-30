@@ -4,7 +4,6 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Conference</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +13,6 @@
   <tr>
     <td><%= attendee.name %></td>
     <td><%= attendee.email %></td>
-    <td><%= attendee.conferences.attended_by(attendee.id) %></td>
     <td><%= link_to 'Show', attendee %></td>
     <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
     <td><%= link_to 'Destroy', attendee, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -11,8 +11,10 @@
 </p>
 
 <p>
-  <b>Conference:</b>
-  <%= @attendee.conference %>
+  <b>Conferences:</b>
+  <%= @attendee.conferences.each do |c| %>
+    <%= c.name %><br />
+  <% end %>
 </p>
 
 

@@ -1,0 +1,12 @@
+<% if params[:notice] %>
+    <div style="color:red">
+        <%= params[:notice] %>
+    </div>
+<% end %>
+<%= form_tag( { :action => "login", :id => @user }, { :method => "post" } ) %>
+    <label>Username</label><%= text_field "user", "name" %>
+    <br />
+    <label>Password</label><%= password_field "user", "password" %>
+    <br />
+    <%= submit_tag "Login" %>
+</form>

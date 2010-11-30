@@ -1,10 +1,13 @@
 RailsConf::Application.routes.draw do
   get "index/index"
 
-  get "signup", { :controller => "signup", :action => "index"}
+  get "signup", { :controller => "signup", :action => "index" }
   get "signup/index"
   get "signup/approved"
   get "signup/save"
+  get "admin_login", { :controller => "admin_login", :action => "index" }
+  post "admin_login/login"
+  get "admin_login/logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -42,6 +42,12 @@ class AttendeesController < AdminController
   def create
     @attendee = Attendee.new(params[:attendee])
 
+    @attendee.conferences = Array.new
+
+    params[:conferences].each do |c|
+      @attendee.conferences << Conference.find(c)
+    end
+
     respond_to do |format|
       if @attendee.save
         format.html { redirect_to(@attendee, :notice => 'Attendee was successfully created.') }
@@ -57,6 +63,12 @@ class AttendeesController < AdminController
   # PUT /attendees/1.xml
   def update
     @attendee = Attendee.find(params[:id])
+
+    @attendee.conferences = Array.new
+
+    params[:conferences].each do |c|
+      @attendee.conferences << Conference.find(c)
+    end
 
     respond_to do |format|
       if @attendee.update_attributes(params[:attendee])
