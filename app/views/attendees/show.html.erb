@@ -11,10 +11,12 @@
 </p>
 
 <p>
-  <b>Conferences:</b>
-  <%= @attendee.conferences.each do |c| %>
-    <%= c.name %><br />
-  <% end %>
+  <b>Conferences:</b><br />
+  <ul>
+      <% @attendee.conferences.each do |c| %>
+        <li><%= c.name %></li>
+      <% end %>
+  </ul>
 </p>
 
 

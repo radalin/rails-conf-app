@@ -1,1 +1,25 @@
+<%= form_tag :action => "save", :method => "post", :id => @attendee %>
+  <% if params[:error] %>
+    <div style="color:red">
+        <%= params[:error]%>
+    </div>
+  <% end %>
 
+  <div class="field">
+    Full Name<br />
+    <%= text_field :attendee, "name" %>
+  </div>
+  <div class="field">
+    Email<br />
+    <%= text_field :attendee, "email" %>
+  </div>
+  <div class="field">
+    Available Conferences<br />
+    <% Conference.upcoming.each do |c| %>
+        <input name="conferences[]" type="checkbox" value="<%=c.id%>" /><%= c.name %><br />
+    <% end %>
+  </div>
+  <div class="actions">
+    <input type="submit" value="Sign Up To Conferences" />
+  </div>
+</form>
