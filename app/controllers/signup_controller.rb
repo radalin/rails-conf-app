@@ -13,6 +13,7 @@ class SignupController < ApplicationController
     if @attendee.save
       redirect_to :action => "approved"
     else
+      #FIXME: It's not good to see error messages transmitted as they are via get...
       redirect_to signup_path(:error => "Email already exists...")
     end
   end
